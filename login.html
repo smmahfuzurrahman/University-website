@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="index.css">
+  <title>Southern University Bangladesh</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <nav>
+    <a href="/"><img src="../images/logo.png"></a>
+    <div class="nav-links" id="navLinks">
+      <i class="fa fa-times" onclick="hidemenu()"></i>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="/">NOTICE</a></li>
+        <li><a href="department.html">DEPRTMENT</a></li>
+        <li><a href="admitionformH.html">BACHELOR</a></li>
+        <li><a href="admitionformM.html">MASTER'S</a></li>
+        <li><a href="/">CONTACT</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showmenu()"></i>
+  </nav>
+
+  <div class="login-wrapper">
+    <form class="form" method="POST">
+      <img src="images/avatar.png" alt="">
+      <h2>Student Login</h2>
+      <div class="input-group">
+        <input type="text" name="loginUser" id="loginUser" autocomplete="off" required>
+        <label for="loginUser">User Name</label>
+      </div>
+      <div class="input-group">
+        <input type="password" name="loginPassword" id="loginPassword" required>
+        <label for="loginPassword">Password</label>
+      </div>
+      <input type="submit" value="Login" class="submit-btn">
+      <a href="#forgot-pw" class="forgot-pw">Password Reset</a>
+    </form>
+
+    <div id="forgot-pw">
+      <form class="form">
+        <a href="#" class="close">&times;</a>
+        <h2>Reset Password</h2>
+        <div class="input-group">
+          <input type="email" name="email" id="email" required>
+          <label for="email">Email</label>
+        </div>
+        <input type="submit" value="Submit" class="submit-btn">
+      </form>
+    </div>
+  </div>
+</body>
+<script>
+  var navLinks = document.getElementById("navLinks");
+  function showmenu() {
+    navLinks.style.right = "0";
+  }
+  function hidemenu() {
+    navLinks.style.right = "-200px";
+  }
+</script>
+
+</html>
